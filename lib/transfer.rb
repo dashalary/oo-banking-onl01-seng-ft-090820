@@ -12,16 +12,11 @@ def initialize(sender, receiver, amount)
  end
  
  def valid?
-  if @sender.status == "open" && @receiver.status == "open"
-     @sender.valid? == true 
-     @receiver.valid? == true 
-  else 
-  false 
-  end
+  @sender.valid? && @receiver.valid? 
   end
  
 def execute_transaction
-if @sender.valid? == true && @receiver.valid? == true
+if valid?
   @sender.balance = @sender.balance - @amount 
   @receiver.balance = @receiver.balance + @amount 
   @status = "complete"
