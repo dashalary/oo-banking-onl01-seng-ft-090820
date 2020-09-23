@@ -21,7 +21,7 @@ def initialize(sender, receiver, amount)
   end
  
 def execute_transaction
-if @sender.valid? == true
+if @sender.valid? == true && @receiver.valid == true
   @sender.balance = @sender.balance - @amount 
   @receiver.balance = @receiver.balance + @amount 
   @status = "complete"
