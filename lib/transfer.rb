@@ -21,6 +21,7 @@ def initialize(sender, receiver, amount)
  
 def execute_transaction
 if valid?
+  binding.pry
   @sender.balance = @sender.balance - @amount 
   @receiver.balance = @receiver.balance + @amount 
   @status = "complete"
