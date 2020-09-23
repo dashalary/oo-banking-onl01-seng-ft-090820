@@ -27,14 +27,14 @@ else
   end
   
  
-def reverse_transfer 
-if valid? && @receiver.balance <= @amount && @status == "complete"
-@receiver.balance = @receiver.balance - @amount 
-@sender.balance = @sender.balance + @amount
-@status = "reversed"
-else
-@status = "rejected"
-puts "Transaction rejected. Please check your account balance."
-end
-end
+# def reverse_transfer 
+# if valid? && @receiver.balance <= @amount && @status == "complete"
+# @receiver.balance = @receiver.balance - @amount 
+# @sender.balance = @sender.balance + @amount
+# @status = "reversed"
+# else
+# @status = "rejected"
+# puts "Transaction rejected. Please check your account balance."
+# end
+# end
 end
