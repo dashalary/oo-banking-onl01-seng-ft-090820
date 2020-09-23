@@ -29,15 +29,8 @@ return "Transaction rejected. Please check your account balance."
   end
   end
  
-# if @sender.status == "closed"
-#   self.status = "rejected"
-#   puts "Transaction rejected. Please check your account balance."
-# else 
-#   @sender.balance = @sender.balance - @amount 
-#   @receiver.balance = @receiver.balance + @amount 
-#   self.status = "complete"
-#   execute_transaction
-# end 
-# end
+
+
+
  
 end
