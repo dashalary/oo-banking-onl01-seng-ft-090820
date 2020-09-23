@@ -21,7 +21,7 @@ if valid? && @sender.balance >= @amount && @status == "pending"
   @status = "complete"
   else
   @status = "rejected"
-  puts "Transaction rejected. Please check your account balance."
+  return "Transaction rejected. Please check your account balance."
   end
   end
   
