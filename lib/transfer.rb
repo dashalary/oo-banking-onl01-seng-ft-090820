@@ -23,7 +23,7 @@ if valid?
   @sender.balance = @sender.balance - @amount 
   @receiver.balance = @receiver.balance + @amount 
   @status = "complete"
-else
+  else
   @status = "rejected"
   puts "Transaction rejected. Please check your account balance."
   end
@@ -31,11 +31,10 @@ else
   
  
 def reverse_transfer 
-    @receiver.balance = @receiver.balance - @amount 
-    @sender.balance = @sender.balance + @amount
-    @status = "reversed"
+execute_transaction
+@receiver.balance = @receiver.balance - @amount 
+@sender.balance = @sender.balance + @amount
+@status = "reversed"
 end
 
-
- 
 end
