@@ -33,5 +33,5 @@ if valid? && @receiver.balance >= @amount && @status == "complete"
 @sender.balance = @sender.balance + @amount
 @status = "reversed"
 end
-
+end
 end
